@@ -1,0 +1,16 @@
+h1 {
+  font-size: x-large;
+  color: black
+}
+
+h2 {
+  font-size: larger;
+}
+
+body {
+  background-color: bisque;
+}
+
+html *{
+  margin-top: 10px;
+}
