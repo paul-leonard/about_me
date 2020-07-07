@@ -13,8 +13,8 @@ Paul Leonard
 
 #### Links and Resources
 Below are some helpful links and resources used in producing this website.
-- Code 201 class repo
-- Code 201 class notes
+- [Code 201 class repo](https://github.com/codefellows/seattle-201d65)
+- My Code 201 class notes
 - [Setting Up Code 201 Projects](https://codefellows.github.io/code-201-guide/curriculum/class-02/project_setup)
 
 #### Reflections and Comments
@@ -23,6 +23,7 @@ Below are some helpful links and resources used in producing this website.
 #### Use of Tools
 - .eslintrc.json is used as published on the [class GitHub repo](https://github.com/codefellows/seattle-201d65).
 - [Eric Meyer's reset.css file](https://meyerweb.com/eric/tools/css/reset/)
+- The JavaScript 'use strict' command was used to ensure proper programming syntax was followed. 
 
 #### License
 Published with the MIT License on GitHub.
