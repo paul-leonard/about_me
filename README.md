@@ -19,6 +19,7 @@ Below are some helpful links and resources used in producing this website.
 
 #### Reflections and Comments
 - My initial estimate of time to complete this site was 3 hours.
+- In the end, it took me about 3 hours and 40 minutes to complete the assignment.
 
 #### Use of Tools
 - .eslintrc.json is used as published on the [class GitHub repo](https://github.com/codefellows/seattle-201d65).
