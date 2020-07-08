@@ -63,7 +63,6 @@ li {
 }
 
 footer {
-  /* float: left; */
   margin: auto;
   background-color: royalblue;
   margin-top: 500px;
@@ -72,7 +71,7 @@ footer {
 .TVListInsert {
   float:right;
   max-width: 300px;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 #TVPictureArea {
@@ -87,4 +86,6 @@ footer {
 }
 /* I tried to use these two resources to figure out this background image:
 https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
-https://www.w3schools.com/cssref/pr_background-image.asp  */
+https://www.w3schools.com/cssref/pr_background-image.asp  
+This is the source that finally helped get me there!
+https://www.w3schools.com/cssref/css3_pr_background-size.asp  */
