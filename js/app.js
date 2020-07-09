@@ -72,9 +72,9 @@ var totalCorrectAns = 0;
 // Guessing game about me; starting with a personal greeting
 
 
+// *****QUESTION 1*****  Personal greeting and question 1
 
 function cookieQuestion(userName) {
-  // *****QUESTION 1*****  Personal greeting and question 1
   var ans1LikeCookies = prompt('Hi, ' + userName + '!  Does Paul, the site owner, like cookies?');
 
   //convert the answer to lowercase to make non-case sensitive
@@ -99,24 +99,28 @@ cookieQuestion(userName);
 
 
 // *****QUESTION 2*****
-var ans1LikeIceCream = prompt('If you offered Paul some ice cream, would he take it?');
 
-//convert the answer to lowercase to make non-case sensitive
-var ans1LowerLikeIceCream = ans1LikeIceCream.toLowerCase();
+function iceCreamQuestion() {
+  var ans1LikeIceCream = prompt('If you offered Paul some ice cream, would he take it?');
 
-//if elses to determine response
-if(ans1LowerLikeIceCream === 'y' || ans1LowerLikeIceCream === 'yes'){
-  //console.log('You bet he would!  Especially if it is served with cookies!');
-  alert('You bet he would!  Especially if it is served with cookies!');
-  totalCorrectAns++;
-} else if (ans1LowerLikeIceCream === 'n' || ans1LowerLikeIceCream === 'no'){
-  //console.log('Paul worked at Baskin Robbins and once ate a half gallon of ice cream.  He didn\'t like ice cream the next day... but does again now!');
-  alert('Paul worked at Baskin Robbins and once ate a half gallon of ice cream.  He didn\'t like ice cream the next day... but does again now!');
-} else {
-  //console.log('Quit messing around:)');
-  alert('Quit messing around:)');
+  //convert the answer to lowercase to make non-case sensitive
+  var ans1LowerLikeIceCream = ans1LikeIceCream.toLowerCase();
+
+  //if elses to determine response
+  if(ans1LowerLikeIceCream === 'y' || ans1LowerLikeIceCream === 'yes'){
+    //console.log('You bet he would!  Especially if it is served with cookies!');
+    alert('You bet he would!  Especially if it is served with cookies!');
+    totalCorrectAns++;
+  } else if (ans1LowerLikeIceCream === 'n' || ans1LowerLikeIceCream === 'no'){
+    //console.log('Paul worked at Baskin Robbins and once ate a half gallon of ice cream.  He didn\'t like ice cream the next day... but does again now!');
+    alert('Paul worked at Baskin Robbins and once ate a half gallon of ice cream.  He didn\'t like ice cream the next day... but does again now!');
+  } else {
+    //console.log('Quit messing around:)');
+    alert('Quit messing around:)');
+  }
 }
 
+iceCreamQuestion();
 
 
 
