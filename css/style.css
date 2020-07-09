@@ -63,8 +63,8 @@ img {
 }
 
 li {
-  border-style: dotted;
-  border-color: red;
+  border-style: none;
+  border-color: none;
   border-width: 1px;
   margin: 3px 3px 3px 3px;
 }
