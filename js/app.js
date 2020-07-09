@@ -1,7 +1,7 @@
 'use strict';
 
 /* Guessing Game about Paul
-Feature Task List:
+Lab02 Feature Task List:  *****************************************************
 - need 5 yes/no questions
 - accept y/n; yes/no answers
 - answers are not case sensitive
@@ -32,6 +32,30 @@ Layout repeated for each question:
 - use if/else statements to determine if the answer was correct
 - use logical ORs because answers could come in any case and will be the form of yes/no/y/n
 - output a response to user with alert() function
+
+
+Lab03 Feature Task List:  *****************************************************
+- update README
+- create top ten ordered list at bottom
+- convert work experience section to be an unordered list
+- convert education section to be an unordered list
+- 6th question to guess a numerical answer
+-- (What was Paul's rec league hockey jersey number? 22)
+-- give too high and too low hints
+-- provide 4 chances to get it right
+--- if incorrect after 4, tell them the correct
+--- consider using a loop
+- 7th question to guess a categorical question/answer with multiple correct answers available
+-- (Can you guess one of Paul's favorite 3 fruits from this list?)
+-- give the user 6 attempts
+-- guesses end if answer is right or out of guesses
+-- display all correct answers at end
+-- consider using a loop
+- tally and report quiz score
+- use console.log()'s for trouble shooting
+- improve CSS
+- 3 stretch goals available
+
 */
 
 
@@ -39,6 +63,7 @@ Layout repeated for each question:
 // Ask User their name
 var userName = prompt('Hello and welcome to the site!  With whom do I have the pleasure of speaking with?');
 
+var totalCorrectAns = 0;
 
 
 // Guessing game about me; starting with a personal greeting
@@ -53,6 +78,7 @@ var ans1LowerLikeCookies = ans1LikeCookies.toLowerCase();
 if(ans1LowerLikeCookies === 'y' || ans1LowerLikeCookies === 'yes'){
   //console.log('You\'re right!  Paul does love cookies!  Don\'t forget the milk!');
   alert('You\'re right!  Paul does love cookies!  Don\'t forget the milk!');
+  totalCorrectAns++;
 } else if (ans1LowerLikeCookies === 'n' || ans1LowerLikeCookies === 'no'){
   //console.log('Who doesn\'t like cookies?!?  Paul loves cookies.  I\'m sorry if you don\'t :(');
   alert('Who doesn\'t like cookies?!?  Paul loves cookies.  I\'m sorry if you don\'t :(');
@@ -74,6 +100,7 @@ var ans1LowerLikeIceCream = ans1LikeIceCream.toLowerCase();
 if(ans1LowerLikeIceCream === 'y' || ans1LowerLikeIceCream === 'yes'){
   //console.log('You bet he would!  Especially if it is served with cookies!');
   alert('You bet he would!  Especially if it is served with cookies!');
+  totalCorrectAns++;
 } else if (ans1LowerLikeIceCream === 'n' || ans1LowerLikeIceCream === 'no'){
   //console.log('Paul worked at Baskin Robbins and once ate a half gallon of ice cream.  He didn\'t like ice cream the next day... but does again now!');
   alert('Paul worked at Baskin Robbins and once ate a half gallon of ice cream.  He didn\'t like ice cream the next day... but does again now!');
@@ -95,6 +122,7 @@ var ans1LowerLikeAirplanes = ans1LikeAirplanes.toLowerCase();
 if(ans1LowerLikeAirplanes === 'y' || ans1LowerLikeAirplanes === 'yes'){
   //console.log('You\'re right, Paul has a passion for aviation.  He spent years working at Boeing and has attended countless airshows.');
   alert('You\'re right, Paul has a passion for aviation.  He spent years working at Boeing and has attended countless airshows.');
+  totalCorrectAns++;
 } else if (ans1LowerLikeAirplanes === 'n' || ans1LowerLikeAirplanes === 'no'){
   //console.log('Paul actually likes airplanes!  He earned his private pilot certificate in 2005 and has spent a lot of time around airplanes.');
   alert('Paul actually likes airplanes!  He earned his private pilot certificate in 2005 and has spent a lot of time around airplanes.');
@@ -116,6 +144,7 @@ var ans1LowerLikeBackpacking = ans1LikeBackpacking.toLowerCase();
 if(ans1LowerLikeBackpacking === 'y' || ans1LowerLikeBackpacking === 'yes'){
   //console.log('Someone remembered to pack a hammock, right!?  Paul loves going backpacking and relaxing in the woods.');
   alert('Someone remembered to pack a hammock, right!?  Paul loves going backpacking and relaxing in the woods.');
+  totalCorrectAns++;
 } else if (ans1LowerLikeBackpacking === 'n' || ans1LowerLikeBackpacking === 'no'){
   //console.log('Paul actually enjoys going backpacking and spending time in nature.');
   alert('Paul actually enjoys going backpacking and spending time in nature.');
@@ -137,6 +166,7 @@ var ans1LowerLikeFishing = ans1LikeFishing.toLowerCase();
 if(ans1LowerLikeFishing === 'n' || ans1LowerLikeFishing === 'no'){
   //console.log('That\'s right.  Paul isn\'t too big of a fan of fishing.  However... with a little more exposure to fishing, maybe he would change his mind.');
   alert('That\'s right.  Paul isn\'t too big of a fan of fishing.  However... with a little more exposure to fishing, maybe he would change his mind.');
+  totalCorrectAns++;
 } else if (ans1LowerLikeFishing === 'y' || ans1LowerLikeFishing === 'yes'){
   //console.log('Paul actually doesn\'t like fishing that much.  But he hasn\'t had that much exposure to it.  Maybe if he goes he\'ll learn to like it!');
   alert('Paul actually doesn\'t like fishing that much.  But he hasn\'t had that much exposure to it.  Maybe if he goes he\'ll learn to like it!');
@@ -146,6 +176,40 @@ if(ans1LowerLikeFishing === 'n' || ans1LowerLikeFishing === 'no'){
 }
 
 
+
+
+
+
+
+
+
+
+//This section provides feedback to the user to let them know how well they did on the quiz.
+
+switch (totalCorrectAns) {
+case 7:
+  alert('Wow!  You know Paul very well!  Perfect Score!  7 out of 7:)');
+  break;
+case 6:
+  alert('Near perfect!  6 out of 7!');
+  break;
+case 5:
+  alert('Pretty good!  You got 5 out of 7!');
+  break;
+case 4:
+  alert('You got 4 out 7.  I bet you can do better next time!');
+  break;
+case 3:
+case 2:
+case 1:
+case 0:
+  alert('You were only able to get ' + totalCorrectAns + ' answer(s) correct out of 7.  Hopefully you got to know me better and will get more correct next time.');
+  break;
+default:
+  alert('Error in score tally.');
+  break;
+}
+// This W3 page helped me understand how to have multiple cases share the same conditional code block:  https://www.w3schools.com/js/js_switch.asp
 
 
 // Personal goodbye to the user
