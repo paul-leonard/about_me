@@ -125,24 +125,29 @@ iceCreamQuestion();
 
 
 // *****QUESTION 3*****
-var ans1LikeAirplanes = prompt('Does Paul like airplanes?');
 
-//convert the answer to lowercase to make non-case sensitive
-var ans1LowerLikeAirplanes = ans1LikeAirplanes.toLowerCase();
 
-//if elses to determine response
-if(ans1LowerLikeAirplanes === 'y' || ans1LowerLikeAirplanes === 'yes'){
-  //console.log('You\'re right, Paul has a passion for aviation.  He spent years working at Boeing and has attended countless airshows.');
-  alert('You\'re right, Paul has a passion for aviation.  He spent years working at Boeing and has attended countless airshows.');
-  totalCorrectAns++;
-} else if (ans1LowerLikeAirplanes === 'n' || ans1LowerLikeAirplanes === 'no'){
-  //console.log('Paul actually likes airplanes!  He earned his private pilot certificate in 2005 and has spent a lot of time around airplanes.');
-  alert('Paul actually likes airplanes!  He earned his private pilot certificate in 2005 and has spent a lot of time around airplanes.');
-} else {
-  //console.log('Quit messing around:)');
-  alert('Quit messing around:)');
+function airplaneQuestion() {
+  var ans1LikeAirplanes = prompt('Does Paul like airplanes?');
+
+  //convert the answer to lowercase to make non-case sensitive
+  var ans1LowerLikeAirplanes = ans1LikeAirplanes.toLowerCase();
+
+  //if elses to determine response
+  if(ans1LowerLikeAirplanes === 'y' || ans1LowerLikeAirplanes === 'yes'){
+    //console.log('You\'re right, Paul has a passion for aviation.  He spent years working at Boeing and has attended countless airshows.');
+    alert('You\'re right, Paul has a passion for aviation.  He spent years working at Boeing and has attended countless airshows.');
+    totalCorrectAns++;
+  } else if (ans1LowerLikeAirplanes === 'n' || ans1LowerLikeAirplanes === 'no'){
+    //console.log('Paul actually likes airplanes!  He earned his private pilot certificate in 2005 and has spent a lot of time around airplanes.');
+    alert('Paul actually likes airplanes!  He earned his private pilot certificate in 2005 and has spent a lot of time around airplanes.');
+  } else {
+    //console.log('Quit messing around:)');
+    alert('Quit messing around:)');
+  }
 }
 
+airplaneQuestion();
 
 
 
