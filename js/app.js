@@ -56,6 +56,9 @@ Lab03 Feature Task List:  *****************************************************
 - improve CSS
 - 3 stretch goals available
 
+Known bugs:
+- if you hit cancel, it puts a null in the prompt answers. This causes null being sent to parseInt() which causes a JS error. Proposed fix: define all UserAnswers early and assign answers to a value... maybe 3?
+
 */
 
 
@@ -177,11 +180,55 @@ if(ans1LowerLikeFishing === 'n' || ans1LowerLikeFishing === 'no'){
 
 
 
+// *****QUESTION 6*****
+// - 6th question to guess a numerical answer
+// -- (What was Paul's rec league hockey jersey number? 22)
+// -- give too high and too low hints
+// -- provide 4 chances to get it right
+// --- if incorrect after 4, tell them the correct
+// --- consider using a loop
+console.log('start question 6');
 
+var qSixGuessAttemptsAllowed = 4;
+var guessesRemain = qSixGuessAttemptsAllowed;
+var guessNumericalGame = 0;
 
+guessNumericalGame = prompt('Okay, ' + userName + ', now the questions get serious.  What was Paul\'s rec league hockey jersey number? You only get ' + guessesRemain + ' guesses;)');
 
+guessNumericalGame = parseInt(guessNumericalGame);
+//Thanks to TA Ron for helping out Klace and I!
 
+while (guessesRemain > 0) {
+  guessesRemain = guessesRemain - 1;
 
+  if(guessNumericalGame === 22){
+    //console.log('question 6 correct');
+    alert('Wow!  He was jersey number 22!  Nice work!');
+    //use up the tries if they got it right; or do a break command to a named loop
+    guessesRemain = 0;
+
+  } else if (guessesRemain < 1) {
+    //console.log('out of guesses');
+    alert('Sorry!!! You\'re out of guesses!  His jersey number was 22.  No worries.  That was a tough one!');
+
+  } else if ((guessNumericalGame > 22) && (guessesRemain >= 1)){
+    guessNumericalGame = parseInt(prompt('Too high!  Guess again!  You have ' + guessesRemain + ' guesses remaining.'));
+
+  } else if ((guessesRemain < 22) && (guessesRemain >= 1)){
+    guessNumericalGame = parseInt(prompt('Too low!  Guess again!  You have ' + guessesRemain + ' guesses remaining.'));
+
+  } else {
+    console.log('Error.  Ended up in else bucket.');
+  }
+}
+
+// TA Helping Klace when 3 wasn't === 3.
+// console.log(typeof guessNumber);
+// so have to convert guessNumber back to an actual integer using ---> parseint(input)
+// + sign uses object to array and back and forth problems.... so get in habit of using console.log('text',variable)
+// can name for and while loops.  so that way you can call to break the loop from within the if statement.  looks like:
+// nameofloop: for (forloopstuff)
+// break nameofloop;
 
 
 //This section provides feedback to the user to let them know how well they did on the quiz.
