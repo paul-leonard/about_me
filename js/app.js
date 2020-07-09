@@ -70,27 +70,32 @@ var totalCorrectAns = 0;
 
 
 // Guessing game about me; starting with a personal greeting
-// *****QUESTION 1*****  Personal greeting and question 1
-var ans1LikeCookies = prompt('Hi, ' + userName + '!  Does Paul, the site owner, like cookies?');
 
-//convert the answer to lowercase to make non-case sensitive
-var ans1LowerLikeCookies = ans1LikeCookies.toLowerCase();
-// https://www.w3schools.com/jsref/jsref_tolowercase.asp helped me learn how to use this function.
 
-//if elses to determine response
-if(ans1LowerLikeCookies === 'y' || ans1LowerLikeCookies === 'yes'){
-  //console.log('You\'re right!  Paul does love cookies!  Don\'t forget the milk!');
-  alert('You\'re right!  Paul does love cookies!  Don\'t forget the milk!');
-  totalCorrectAns++;
-} else if (ans1LowerLikeCookies === 'n' || ans1LowerLikeCookies === 'no'){
-  //console.log('Who doesn\'t like cookies?!?  Paul loves cookies.  I\'m sorry if you don\'t :(');
-  alert('Who doesn\'t like cookies?!?  Paul loves cookies.  I\'m sorry if you don\'t :(');
-} else {
-  //console.log('Quit messing around:)');
-  alert('Quit messing around:)');
+
+function cookieQuestion(userName) {
+  // *****QUESTION 1*****  Personal greeting and question 1
+  var ans1LikeCookies = prompt('Hi, ' + userName + '!  Does Paul, the site owner, like cookies?');
+
+  //convert the answer to lowercase to make non-case sensitive
+  var ans1LowerLikeCookies = ans1LikeCookies.toLowerCase();
+  // https://www.w3schools.com/jsref/jsref_tolowercase.asp helped me learn how to use this function.
+
+  //if elses to determine response
+  if(ans1LowerLikeCookies === 'y' || ans1LowerLikeCookies === 'yes'){
+    //console.log('You\'re right!  Paul does love cookies!  Don\'t forget the milk!');
+    alert('You\'re right!  Paul does love cookies!  Don\'t forget the milk!');
+    totalCorrectAns++;
+  } else if (ans1LowerLikeCookies === 'n' || ans1LowerLikeCookies === 'no'){
+    //console.log('Who doesn\'t like cookies?!?  Paul loves cookies.  I\'m sorry if you don\'t :(');
+    alert('Who doesn\'t like cookies?!?  Paul loves cookies.  I\'m sorry if you don\'t :(');
+  } else {
+    //console.log('Quit messing around:)');
+    alert('Quit messing around:)');
+  }
 }
 
-
+cookieQuestion(userName);
 
 
 // *****QUESTION 2*****
