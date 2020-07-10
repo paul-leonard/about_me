@@ -95,7 +95,7 @@ function cookieQuestion(userName) {
   }
 }
 
-cookieQuestion(userName);
+
 
 
 // *****QUESTION 2*****
@@ -120,7 +120,7 @@ function iceCreamQuestion() {
   }
 }
 
-iceCreamQuestion();
+
 
 
 
@@ -147,7 +147,7 @@ function airplaneQuestion() {
   }
 }
 
-airplaneQuestion();
+
 
 
 
@@ -174,27 +174,31 @@ function backpackingQuestion() {
   }
 }
 
-backpackingQuestion();
+
 
 
 // *****QUESTION 5*****
-var ans1LikeFishing = prompt('How about fishing?  Does Paul like fishing?');
 
-//convert the answer to lowercase to make non-case sensitive
-var ans1LowerLikeFishing = ans1LikeFishing.toLowerCase();
+function fishingQuestion() {
+  var ans1LikeFishing = prompt('How about fishing?  Does Paul like fishing?');
 
-//if elses to determine response
-if(ans1LowerLikeFishing === 'n' || ans1LowerLikeFishing === 'no'){
-  //console.log('That\'s right.  Paul isn\'t too big of a fan of fishing.  However... with a little more exposure to fishing, maybe he would change his mind.');
-  alert('That\'s right.  Paul isn\'t too big of a fan of fishing.  However... with a little more exposure to fishing, maybe he would change his mind.');
-  totalCorrectAns++;
-} else if (ans1LowerLikeFishing === 'y' || ans1LowerLikeFishing === 'yes'){
-  //console.log('Paul actually doesn\'t like fishing that much.  But he hasn\'t had that much exposure to it.  Maybe if he goes he\'ll learn to like it!');
-  alert('Paul actually doesn\'t like fishing that much.  But he hasn\'t had that much exposure to it.  Maybe if he goes he\'ll learn to like it!');
-} else {
-  //console.log('Quit messing around:)');
-  alert('Quit messing around:)');
+  //convert the answer to lowercase to make non-case sensitive
+  var ans1LowerLikeFishing = ans1LikeFishing.toLowerCase();
+
+  //if elses to determine response
+  if(ans1LowerLikeFishing === 'n' || ans1LowerLikeFishing === 'no'){
+    //console.log('That\'s right.  Paul isn\'t too big of a fan of fishing.  However... with a little more exposure to fishing, maybe he would change his mind.');
+    alert('That\'s right.  Paul isn\'t too big of a fan of fishing.  However... with a little more exposure to fishing, maybe he would change his mind.');
+    totalCorrectAns++;
+  } else if (ans1LowerLikeFishing === 'y' || ans1LowerLikeFishing === 'yes'){
+    //console.log('Paul actually doesn\'t like fishing that much.  But he hasn\'t had that much exposure to it.  Maybe if he goes he\'ll learn to like it!');
+    alert('Paul actually doesn\'t like fishing that much.  But he hasn\'t had that much exposure to it.  Maybe if he goes he\'ll learn to like it!');
+  } else {
+    //console.log('Quit messing around:)');
+    alert('Quit messing around:)');
+  }
 }
+
 
 
 
@@ -288,6 +292,12 @@ keepGuessing: while (guessesRemain > 0) {
 //instead of using the break command, considered writing a variable to say it was time to break the loop and having that as part of the while statement conditonal.
 //Fantastic discovery by chance... '\r' is the line break code.
 
+// function calls to run through quiz questions
+cookieQuestion(userName);
+iceCreamQuestion();
+airplaneQuestion();
+backpackingQuestion();
+fishingQuestion();
 
 
 
