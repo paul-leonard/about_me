@@ -152,25 +152,29 @@ airplaneQuestion();
 
 
 // *****QUESTION 4*****
-var ans1LikeBackpacking = prompt('Would Paul enjoy a 3 day weekend 7 miles into the woods?');
 
-//convert the answer to lowercase to make non-case sensitive
-var ans1LowerLikeBackpacking = ans1LikeBackpacking.toLowerCase();
 
-//if elses to determine response
-if(ans1LowerLikeBackpacking === 'y' || ans1LowerLikeBackpacking === 'yes'){
-  //console.log('Someone remembered to pack a hammock, right!?  Paul loves going backpacking and relaxing in the woods.');
-  alert('Someone remembered to pack a hammock, right!?  Paul loves going backpacking and relaxing in the woods.');
-  totalCorrectAns++;
-} else if (ans1LowerLikeBackpacking === 'n' || ans1LowerLikeBackpacking === 'no'){
-  //console.log('Paul actually enjoys going backpacking and spending time in nature.');
-  alert('Paul actually enjoys going backpacking and spending time in nature.');
-} else {
-  //console.log('Quit messing around:)');
-  alert('Quit messing around:)');
+function backpackingQuestion() {
+  var ans1LikeBackpacking = prompt('Would Paul enjoy a 3 day weekend 7 miles into the woods?');
+
+  //convert the answer to lowercase to make non-case sensitive
+  var ans1LowerLikeBackpacking = ans1LikeBackpacking.toLowerCase();
+
+  //if elses to determine response
+  if(ans1LowerLikeBackpacking === 'y' || ans1LowerLikeBackpacking === 'yes'){
+    //console.log('Someone remembered to pack a hammock, right!?  Paul loves going backpacking and relaxing in the woods.');
+    alert('Someone remembered to pack a hammock, right!?  Paul loves going backpacking and relaxing in the woods.');
+    totalCorrectAns++;
+  } else if (ans1LowerLikeBackpacking === 'n' || ans1LowerLikeBackpacking === 'no'){
+    //console.log('Paul actually enjoys going backpacking and spending time in nature.');
+    alert('Paul actually enjoys going backpacking and spending time in nature.');
+  } else {
+    //console.log('Quit messing around:)');
+    alert('Quit messing around:)');
+  }
 }
 
-
+backpackingQuestion();
 
 
 // *****QUESTION 5*****
