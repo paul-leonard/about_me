@@ -20,6 +20,11 @@ This website will offer background information on me in regards to geographical 
 #### Author
 Paul Leonard
 
+#### Pair Programming Lab 04 Session
+- Questions 1 - 7 refactored into functions with their calls placed below in group.
+- Navigator: Paul Leonard
+- Driver: Jack Nelson
+
 #### Links and Resources
 Below are some helpful links and resources used in producing this website.
 - [Code 201 class repo](https://github.com/codefellows/seattle-201d65)
