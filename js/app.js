@@ -251,55 +251,60 @@ function guessJersey(userName) {
 
 
 // *****QUESTION 7*****
-// - 7th question to guess a categorical question/answer with multiple correct answers available
-// -- (Can you guess one of Paul's favorite 3 fruits from this list?)
-// -- give the user 6 attempts
-// -- guesses end if answer is right or out of guesses
-// -- display all correct answers at end
-// -- consider using a loop
-// favorite fruits will be: strawberries, blueberries, nectarines
-// other fruits will be: apples, oranges, bananas, pears, cherries
 
-var paulFavoriteFruits = ['strawberries', 'cherries', 'nectarines'];
+function guessFruit() {
+  // - 7th question to guess a categorical question/answer with multiple correct answers available
+  // -- (Can you guess one of Paul's favorite 3 fruits from this list?)
+  // -- give the user 6 attempts
+  // -- guesses end if answer is right or out of guesses
+  // -- display all correct answers at end
+  // -- consider using a loop
+  // favorite fruits will be: strawberries, blueberries, nectarines
+  // other fruits will be: apples, oranges, bananas, pears, cherries
 
-var qSevenGuessAttemptsAllowed = 6;
-var guessFavFruit = 'tasty';
-var guessesRemain = qSevenGuessAttemptsAllowed;
+  var paulFavoriteFruits = ['strawberries', 'cherries', 'nectarines'];
 
-guessFavFruit = prompt('What is one of Paul\'s 3 favorite fruits? You only get ' + guessesRemain + ' guesses. \r \r Good guesses include: apples, bananas, blueberries, cherries, nectarines, oranges, peaches, pears, and strawberries');
+  var qSevenGuessAttemptsAllowed = 6;
+  var guessFavFruit = 'tasty';
+  var guessesRemain = qSevenGuessAttemptsAllowed;
 
-keepGuessing: while (guessesRemain > 0) {
-  guessesRemain = guessesRemain - 1;
+  guessFavFruit = prompt('What is one of Paul\'s 3 favorite fruits? You only get ' + guessesRemain + ' guesses. \r \r Good guesses include: apples, bananas, blueberries, cherries, nectarines, oranges, peaches, pears, and strawberries');
 
-  // could do the array check as a for loop... or could just list out 3 variations with logical ORs... or maybe there is a fancy array tool?
-  if((guessFavFruit === paulFavoriteFruits[0]) || (guessFavFruit === paulFavoriteFruits[1]) || (guessFavFruit === paulFavoriteFruits[2])){
-    //console.log('question 7 correct');
-    totalCorrectAns++;
-    alert('You\'re right... he does like ' + guessFavFruit + '!!  His favorite fruits are cherries, nectarines, and strawberries.');
-    //use up the tries if they got it right; or do a break command to a named loop
-    break keepGuessing;
+  keepGuessing: while (guessesRemain > 0) {
+    guessesRemain = guessesRemain - 1;
 
-  } else if (guessesRemain < 1) {
-    //console.log('out of guesses');
-    alert('Sorry!!! You\'re out of guesses!  His favorite fruits are cherries, nectarines, and strawberries.');
-    break keepGuessing;
+    // could do the array check as a for loop... or could just list out 3 variations with logical ORs... or maybe there is a fancy array tool?
+    if((guessFavFruit === paulFavoriteFruits[0]) || (guessFavFruit === paulFavoriteFruits[1]) || (guessFavFruit === paulFavoriteFruits[2])){
+      //console.log('question 7 correct');
+      totalCorrectAns++;
+      alert('You\'re right... he does like ' + guessFavFruit + '!!  His favorite fruits are cherries, nectarines, and strawberries.');
+      //use up the tries if they got it right; or do a break command to a named loop
+      break keepGuessing;
 
-  } else {
-    guessFavFruit = prompt('While tasty, not Paul\'s favorite favorite...  You have ' + guessesRemain + ' guesses remaining. \r \r Good guesses include: apples, bananas, blueberries, cherries, nectarines, oranges, peaches, pears, and strawberries');
+    } else if (guessesRemain < 1) {
+      //console.log('out of guesses');
+      alert('Sorry!!! You\'re out of guesses!  His favorite fruits are cherries, nectarines, and strawberries.');
+      break keepGuessing;
+
+    } else {
+      guessFavFruit = prompt('While tasty, not Paul\'s favorite favorite...  You have ' + guessesRemain + ' guesses remaining. \r \r Good guesses include: apples, bananas, blueberries, cherries, nectarines, oranges, peaches, pears, and strawberries');
+    }
   }
+
+  //instead of using the break command, considered writing a variable to say it was time to break the loop and having that as part of the while statement conditonal.
+  //Fantastic discovery by chance... '\r' is the line break code.
 }
 
-//instead of using the break command, considered writing a variable to say it was time to break the loop and having that as part of the while statement conditonal.
-//Fantastic discovery by chance... '\r' is the line break code.
+
 
 // function calls to run through quiz questions
-// cookieQuestion(userName);
-// iceCreamQuestion();
-// airplaneQuestion();
-// backpackingQuestion();
-// fishingQuestion();
+cookieQuestion(userName);
+iceCreamQuestion();
+airplaneQuestion();
+backpackingQuestion();
+fishingQuestion();
 guessJersey(userName);
-
+guessFruit();
 
 //This section provides feedback to the user to let them know how well they did on the quiz.
 
