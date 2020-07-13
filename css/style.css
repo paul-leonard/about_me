@@ -26,11 +26,13 @@ h3 {
   margin-top: 30px;
 }
 
+#tvheader {
+  text-align: center;
+}
+
 body {
   background-color: bisque;
 }
-
-
 
 ul {
   list-style-type: circle;
@@ -45,7 +47,6 @@ ol {
 }
 
 .TopTenTVList {
-  background-color: gray;
   margin-top: 30px;
   max-width: 600px;
   padding-top: 1px;
@@ -73,6 +74,7 @@ footer {
   margin: auto;
   background-color: royalblue;
   margin-top: 500px;
+  text-align: center;
 }
 
 .TVListInsert {
